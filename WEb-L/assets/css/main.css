@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffede7;
+}
+
+@media only screen and (min-width: 392px) {
+  .container {
+    width: 95%;
+    padding: 4px;
+  }
+  .navigation .flex-parent {
+    gap: 10px;
+  }
+  .about .name {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .about .flex-parent {
+    gap: 10px;
+  }
+  .sentence {
+    font-size: 1.8em;
+    margin-top: 20px;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: #fecdbd;
+}
+.flex-parent {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  /* batasi lebarnya */
+  width: 95%;
+  /* tinggal di tengahkan */
+  margin: 0px auto;
+}
+
+/* navigation  */
+.navigation .flex-item.tampilkan {
+  display: none;
+}
+.navigation {
+  letter-spacing: 3px;
+  background-color: #fecdbd;
+  color: #b44345;
+  cursor: pointer;
+}
+.navigation:hover {
+  color: #8f3537;
+}
+
+.navigation .flex-parent {
+  align-items: center;
+  justify-content: flex;
+  padding: 15px 35px;
+  gap: 0px 40px;
+}
+
+.btn {
+  text-align: center;
+  border: 0px;
+  background-color: #fecdbd;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.about {
+  padding: 10px;
+}
+
+.about .info {
+  flex: 1;
+}
+
+.about .photo {
+  flex: 0.6;
+}
+
+.about .flex-parent {
+  align-items: center;
+  justify-content: flex;
+  padding: 15px 35px;
+  gap: 0px 40px;
+}
+
+.about .flex-item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.about .name {
+  display: flex;
+  font-size: 4em;
+  font-weight: 900;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+}
+.about .flex-item.detail {
+  padding-top: 10px;
+}
+.about .detail {
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+.about .name nm {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(255, 215, 222);
+  padding-left: 25px;
+}
+
+.about .photo {
+  flex: 0.6;
+}
+
+.thank-word .flex-parent {
+  align-items: center;
+  justify-content: flex;
+  padding: 15px 35px;
+  gap: 0px 40px;
+}
+
+.thank-word .flex-item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.thank-word .name {
+  display: flex;
+  font-size: 4em;
+  font-weight: 900;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+}
+
+.thank-word .name nm {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(255, 215, 222);
+  padding-left: 25px;
+}
+
+.thank-word .info {
+  text-align: center;
+}
+
+.thank-word .name {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.question .container {
+  justify-content: center;
+}
+
+.sentence {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #8f3537;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 20px;
+  margin-top: 150px;
+}
+
+.flex-parent.question {
+  flex-direction: row;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <title>My Friend!</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <ul class="flex-parent container2">
+        <li class="flex-item" style="margin-right: 20px">
+          <img src="assets/img/logo.jpg" alt="" srcset="" />
+        </li>
+        <li class="flex-item menu" href="#"><a href="home.html">Home</a></li>
+        <li class="flex-item menu"><a href="second.html">??</a></li>
+        <li class="flex-item">
+          <i class="fa-solid fa-globe"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="thank-word">
+        <div id="container">
+            <p class="sentence" id="text"></p> <!-- Placeholder for sentences -->
+        </div>
+    
+        <script>
+            const sentences = [
+            " ",
+                "Hi Lucia!",
+                "Happy BirthDay!!",
+                "Congrats That You are 17 Now!",
+                "I Mean That We Are 17 Now OMG",
+                "I Really Hope That You Grow,",
+                "And Become More And More Amazing",
+                "Every Day!!",
+                "Happy BirthDay Sayang",
+                "Im Really Lucky To Meet You!",
+                "Can We Take A Photo Together? wkwkw :)"
+            ];
+    
+            let currentIndex = 0;
+            let currentCharIndex = 0;
+            const typingSpeed = 100;  // Speed of typing (in milliseconds)
+            const sentenceDelay = 1350;  // Delay before the next sentence starts (2 seconds)
+
+            function typeSentence() {
+                const textElement = document.getElementById("text");
+    
+                // Ensure we haven't run out of sentences
+                if (currentIndex < sentences.length) {
+                    const sentence = sentences[currentIndex];
+    
+                    // Print the next character
+                    if (currentCharIndex < sentence.length) {
+                        textElement.innerHTML += sentence.charAt(currentCharIndex);
+                        currentCharIndex++;
+                        setTimeout(typeSentence, typingSpeed); // Call again to print next char
+                    } else {
+                        // Sentence finished, prepare for next
+                        setTimeout(() => {
+                            textElement.innerHTML = ""; // Clear text
+                            currentCharIndex = 0;       // Reset character index
+                            currentIndex++;             // Move to next sentence
+                            setTimeout(typeSentence, sentenceDelay);  // Delay before next sentence
+                        }, sentenceDelay);
+                    }
+                    
+                }
+            }
+            
+    
+            // Start the typing effect after the page loads
+            window.onload = function() {
+                typeSentence();
+            };
+        </script>
+      </div>
+    </div>
+
+  </body>
+</html>
